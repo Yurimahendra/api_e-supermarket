@@ -17,7 +17,6 @@ class CreateDataPembelisTable extends Migration
             $table->id();
             $table->bigInteger('nik')->unique();
             $table->string('nama');
-            $table->string('email')->unique();
             $table->string('jenis_kelamin');
             $table->string('alamat');
             $table->string('tempat_lahir');
