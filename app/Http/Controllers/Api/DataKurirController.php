@@ -33,7 +33,6 @@ class DataKurirController extends Controller
         $request->validate([
             'nik' => 'required',
             'nama' => 'required',
-            'email' => 'required|email',
             'jenis_kelamin' => 'required',
             'alamat' => 'required',
             'tempat_lahir' => 'required',
@@ -53,7 +52,6 @@ class DataKurirController extends Controller
         $dataKurir = DataKurir::create([
             'nik' => $request->nik,
             'nama' => $request->nama,
-            'email' => $request->email,
             'jenis_kelamin' => $request->jenis_kelamin,
             'alamat' => $request->alamat,
             'tempat_lahir' => $request->tempat_lahir,
@@ -89,7 +87,6 @@ class DataKurirController extends Controller
         $request->validate([
             'nik' => '',
             'nama' => '',
-            'email' => 'email',
             'jenis_kelamin' => '',
             'alamat' => '',
             'tempat_lahir' => '',
@@ -119,7 +116,6 @@ class DataKurirController extends Controller
 
         $apdetDataKurir->nik           = $request->nik;
         $apdetDataKurir->nama          = $request->nama;
-        $apdetDataKurir->email         = $request->email;
         $apdetDataKurir->jenis_kelamin = $request->jenis_kelamin;
         $apdetDataKurir->alamat        = $request->alamat;
         $apdetDataKurir->tempat_lahir  = $request->tempat_lahir;

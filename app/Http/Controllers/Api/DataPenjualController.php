@@ -31,7 +31,6 @@ class DataPenjualController extends Controller
         $request->validate([
             'nik' => 'required',
             'nama' => 'required',
-            'email' => 'required|email',
             'jenis_kelamin' => 'required',
             'alamat' => 'required',
             'tempat_lahir' => 'required',
@@ -53,7 +52,6 @@ class DataPenjualController extends Controller
         $dataPenjual = DataPenjual::create([
             'nik' => $request->nik,
             'nama' => $request->nama,
-            'email' => $request->email,
             'jenis_kelamin' => $request->jenis_kelamin,
             'alamat' => $request->alamat,
             'tempat_lahir' => $request->tempat_lahir,
@@ -89,7 +87,6 @@ class DataPenjualController extends Controller
         $request->validate([
             'nik' => 'required',
             'nama' => 'required',
-            'email' => 'required|email',
             'jenis_kelamin' => 'required',
             'alamat' => 'required',
             'tempat_lahir' => 'required',
@@ -121,7 +118,6 @@ class DataPenjualController extends Controller
 
         $apdetDataPenjual->nik           = $request->nik;
         $apdetDataPenjual->nama          = $request->nama;
-        $apdetDataPenjual->email         = $request->email;
         $apdetDataPenjual->jenis_kelamin = $request->jenis_kelamin;
         $apdetDataPenjual->alamat        = $request->alamat;
         $apdetDataPenjual->tempat_lahir  = $request->tempat_lahir;

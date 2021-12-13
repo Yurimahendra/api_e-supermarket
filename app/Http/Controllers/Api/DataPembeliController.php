@@ -31,7 +31,6 @@ class DataPembeliController extends Controller
         $request->validate([
             'nik' => 'required',
             'nama' => 'required',
-            'email' => 'required|email',
             'jenis_kelamin' => 'required',
             'alamat' => 'required',
             'tempat_lahir' => 'required',
@@ -52,7 +51,6 @@ class DataPembeliController extends Controller
         $dataPembeli = DataPembeli::create([
             'nik' => $request->nik,
             'nama' => $request->nama,
-            'email' => $request->email,
             'jenis_kelamin' => $request->jenis_kelamin,
             'alamat' => $request->alamat,
             'tempat_lahir' => $request->tempat_lahir,
@@ -87,7 +85,6 @@ class DataPembeliController extends Controller
         $request->validate([
             'nik' => 'required',
             'nama' => 'required',
-            'email' => 'required|email',
             'jenis_kelamin' => 'required',
             'alamat' => 'required',
             'tempat_lahir' => 'required',
@@ -118,7 +115,6 @@ class DataPembeliController extends Controller
 
         $apdetDataPembeli->nik           = $request->nik;
         $apdetDataPembeli->nama          = $request->nama;
-        $apdetDataPembeli->email         = $request->email;
         $apdetDataPembeli->jenis_kelamin = $request->jenis_kelamin;
         $apdetDataPembeli->alamat        = $request->alamat;
         $apdetDataPembeli->tempat_lahir  = $request->tempat_lahir;
